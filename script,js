@@ -1,3 +1,5 @@
 window.init = function() {
-  alert("hi")
+  navigator.clipboard.readText().then(text => {
+    alert(text)
+  })
 }
