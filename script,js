@@ -1,5 +1,5 @@
 window.init = function() {
-  pin = await navigator.clipboard.readText()
+  pin = await navigator.clipboard.read()
   document.getElementById("game-input").innerHTML = pin
   document.querySelectorAll("button").forEach(element => {
     if (element.innerHTML === "Enter") {
