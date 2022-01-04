@@ -1,5 +1,11 @@
 window.init = function() {
+  let gameInput = document.getElementById("game-input")
   navigator.clipboard.readText().then(text => {
-    alert(text)
+  gameInput.value = text
+  })
+  document.querySelectorAll("button", element => {
+    if (button.innerHTML === "Enter") {
+      button.click()
+    }
   })
 }
