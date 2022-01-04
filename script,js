@@ -1,8 +1,6 @@
 window.init = function() {
-  let gameInput = document.getElementById("game-input")
-  navigator.clipboard.readText().then(text => {
-  gameInput.value = text
-  })
+  pin = await navigator.clipboard.readText()
+  document.getElementById("game-input").innerHTML = pin
   document.querySelectorAll("button").forEach(element => {
     if (element.innerHTML === "Enter") {
       element.click()
