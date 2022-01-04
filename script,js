@@ -4,8 +4,8 @@ window.init = function() {
   gameInput.value = text
   })
   document.querySelectorAll("button", element => {
-    if (button.innerHTML === "Enter") {
-      button.click()
+    if (element.innerHTML === "Enter") {
+      element.click()
     }
   })
 }
