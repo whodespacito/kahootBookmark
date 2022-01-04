@@ -3,7 +3,9 @@ window.init = function() {
   navigator.clipboard.readText().then(text => {
   gameInput.value = text
   })
-  document.querySelectorAll("button", element => {
-    element.click()
+  document.querySelectorAll("button").forEach(element => {
+    if (element.innerHTML === "Enter") {
+      element.click()
+    }
   })
 }
