@@ -12,10 +12,14 @@ window.autojoin = function() {
 }
 
 window.randomAnswer = function() {
-  let answers,number
-  let interval = setInterval(() => {
-    answers = document.querySelectorAll("button")
-    number = math.floor(math.random() * 4)
-    answers[number].click()
-  })
+  let answers,number,interval
+  if (!interval) {
+    interval = setInterval(() => {
+      answers = document.querySelectorAll("button")
+      number = math.floor(math.random() * 4)
+      answers[number].click()
+    })
+  } else {
+    clearInterval(interval)
+  }
 }
