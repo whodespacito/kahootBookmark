@@ -1,5 +1,6 @@
 //wip
 window.autojoin = function() {
+  alert("autojoin starting")
   let gameInput = document.getElementById("game-input")
   navigator.clipboard.readText().then(text => {
   gameInput.value = text
@@ -12,6 +13,7 @@ window.autojoin = function() {
 }
 
 window.randomAnswer = function() {
+  alert("randomAnswer starting")
   let answers,number,interval
   if (!interval) {
     interval = setInterval(() => {
