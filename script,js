@@ -1,4 +1,5 @@
-window.init = function() {
+//wip
+window.autojoin = function() {
   let gameInput = document.getElementById("game-input")
   navigator.clipboard.readText().then(text => {
   gameInput.value = text
@@ -7,5 +8,14 @@ window.init = function() {
     if (element.innerHTML == "Enter") {
       element.click()
     }
+  })
+}
+
+window.randomAnswer = function() {
+  let answers,number
+  let interval = setInterval(() => {
+    answers = document.querySelectorAll("button")
+    number = math.floor(math.random() * 4)
+    answers[number].click()
   })
 }
