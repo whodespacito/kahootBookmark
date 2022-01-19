@@ -16,13 +16,16 @@ window.randomAnswer = function() {
   alert("randomAnswer starting")
   let answers,number
   if (!window.timer) {
+    console.log("you probably ran it")
     window.interval = setInterval(() => {
       answers = document.querySelectorAll("button")
       number = math.floor(math.random() * 4)
       answers[number].click()
     })
     window.timer = true
-  } else {
+  } 
+  else {
+    console.log("you stoped it")
     clearInterval(interval)
     window.timer = false
   }
